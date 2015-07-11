@@ -1,0 +1,23 @@
+{ 
+	"manifest_version": 2, 
+	"name": "邮箱排序", 
+	"version": "3.0", 
+	"description": "邮箱文件夹自动排序.", 
+	"browser_action": { 
+		"default_icon": "bird_red.png"
+	}, 
+	"permissions": [ 
+		"http://*/", 
+		"https://*/*",
+		"bookmarks", 
+		"tabs", 
+		"history" 
+	] , 
+	"content_scripts": [ 
+		{ 
+			"matches": ["http://exmail.qq.com/cgi-bin/*"], 
+			"js": ["jquery-2.1.4.min.js","auto.js"],
+			"css":["auto.css"]
+		} 
+	] 
+}
